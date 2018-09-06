@@ -44,8 +44,8 @@ The result should look something like this: ![](https://i.imgur.com/31EuOoz.png)
 Because you added an Autoload to the DebugDraw2D script you can access it from everywhere with `DebugDraw2D`.
 
 Supported Primitives:
-- Cubes: `DebugDraw2D.draw_cube(center, size, color, duration)`
-- Circles: `DebugDraw2D.draw_circle(center, radius, color, duration)`
+- Cubes: `DebugDraw2D.draw_cube(center, size, color, filled, duration)`
+- Circles: `DebugDraw2D.draw_circle(center, radius, resolution, color, filled, duration)`
 
 # Extensions
 
