@@ -6,3 +6,6 @@ func _init(color, filled, duration):
 	self.color = color
 	self.filled = filled
 	self.duration_left = duration
+
+func get_points():
+	return PoolVector2Array()
