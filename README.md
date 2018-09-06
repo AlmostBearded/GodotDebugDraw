@@ -37,3 +37,16 @@ Steps:
 3. Add the DebugDraw2D script by locating it via it's path and naming it DebugDraw2D
 
 The result should look something like this: ![](https://i.imgur.com/31EuOoz.png)
+
+
+# Usage
+
+Because you added an Autoload to the DebugDraw2D script you can access it from everywhere with `DebugDraw2D`.
+
+Supported Primitives:
+- Cubes: `DebugDraw2D.draw_cube(center, size, color, duration)`
+- Circles: `DebugDraw2D.draw_circle(center, radius, color, duration)`
+
+# Extensions
+
+Send me your feature requests and I'll see if I can extend the addon with further needed primitives. Alternatively just dig into the source and extend it yourself. Don't forget to send me your pull requests if you do so I can merge them back!
