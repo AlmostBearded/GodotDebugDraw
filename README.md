@@ -46,6 +46,7 @@ Because you added an Autoload to the DebugDraw2D script you can access it from e
 Supported Primitives:
 - Cubes: `DebugDraw2D.draw_cube(center, size, color, filled, duration)`
 - Circles: `DebugDraw2D.draw_circle(center, radius, resolution, color, filled, duration)`
+- Circle Arcs/Pies: `DebugDraw2D.draw_circle_arc(center, radius, angle_from, angle_to, pie, resolution, color, filled, duration)`
 
 # Extensions
 
