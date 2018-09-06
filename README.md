@@ -2,8 +2,7 @@
 
 This addon adds support for drawing shapes on the screen for various (mostly debugging) purposes. 
 
-Currently there's only support for 2D drawing but I'll be extending this as I need it. 
-Send me your feature requests and I'll see what I can do.
+Currently there's only support for 2D drawing but I'll be extending this as I need it.
 
 
 # Installation
