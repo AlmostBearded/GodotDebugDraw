@@ -11,9 +11,13 @@ func draw_cube(center, size = 10, color = Color(1, 0, 1), filled = false, durati
 	cubes.push_back(cube)
 	
 func draw_circle(center, radius = 10, resolution = 16, color = Color(1, 0, 1), filled = false, duration = 0):
-	var circle = CircleArc.new(center, radius, 0, 360, resolution, color, filled, duration)
+	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, filled, duration)
 	circle_arcs.push_back(circle)
 
+func draw_circle_arc(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16, 
+		color = Color(1, 0, 1), filled = false, duration = 0):
+	var circle_arc = CircleArc.new(center, radius, angle_from, angle_to, pie, resolution, color, filled, duration)
+	circle_arcs.push_back(circle_arc)
 
 func _ready():
 	set_process(true)
