@@ -27,7 +27,9 @@ and extract it into your `addons` folder.
 
 ## Autoload
 
-The only thing left to do is to add an autoload for the DebugDraw2D script.
+The only thing left to do is to add an autoload for the DebugDraw2D script. 
+
+(If anyone knows how I could automate this please tell me!)
 
 Steps:
 1. Go to Project > Project Settings
