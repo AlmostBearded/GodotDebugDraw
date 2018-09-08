@@ -4,6 +4,7 @@ This addon adds support for drawing shapes on the screen for various (mostly deb
 
 Currently there's only support for 2D drawing but I'll be extending this as I need it.
 
+![](https://i.imgur.com/2DCAKgp.png)
 
 # Installation
 
