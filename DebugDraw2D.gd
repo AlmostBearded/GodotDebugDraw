@@ -1,14 +1,18 @@
 extends Node2D
 
-const Cube = preload("./primitives/DebugCube2D.gd")
+const Rect = preload("./primitives/DebugRect2D.gd")
 const CircleArc = preload("./primitives/DebugCircleArc2D.gd")
 
-var cubes = []
+var rects = []
 var circle_arcs = []
 
 func draw_cube(center, size = 10, color = Color(1, 0, 1), filled = false, duration = 0):
-	var cube = Cube.new(center, size, color, filled, duration)
-	cubes.push_back(cube)
+	var cube = Rect.new(center, Vector2(size, size), color, filled, duration)
+	rects.push_back(cube)
+
+func draw_rect(center, size = Vector2(15, 10), color = Color(1, 0, 1), filled = false, duration = 0):
+	var rect = Rect.new(center, size, color, filled, duration)
+	rects.push_back(rect)
 	
 func draw_circle(center, radius = 10, resolution = 16, color = Color(1, 0, 1), filled = false, duration = 0):
 	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, filled, duration)
@@ -24,7 +28,7 @@ func _ready():
 	z_index = 1000
 
 func _process(delta):
-	_process_primitives(cubes, delta)
+	_process_primitives(rects, delta)
 	_process_primitives(circle_arcs, delta)
 	update()
 
@@ -39,7 +43,7 @@ func _process_primitives(primitives, delta):
 		primitives.remove(i)
 
 func _draw():
-	_draw_primitives(cubes)
+	_draw_primitives(rects)
 	_draw_primitives(circle_arcs)
 
 func _draw_primitives(primitives):
