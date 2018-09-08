@@ -1,10 +1,20 @@
 extends Node2D
 
+const Line = preload("./primitives/DebugLine2D.gd")
 const Rect = preload("./primitives/DebugRect2D.gd")
 const CircleArc = preload("./primitives/DebugCircleArc2D.gd")
 
 var rects = []
 var circle_arcs = []
+var lines = []
+
+func draw_line(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
+	var line = Line.new(from, to, color, line_width, duration)
+	lines.push_back(line)
+
+func draw_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
+	var line = Line.new(origin, origin + vector, color, line_width, duration)
+	lines.push_back(line)
 
 func draw_cube(center, size = 10, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var cube = Rect.new(center, Vector2(size, size), color, false, line_width, duration)
@@ -47,6 +57,7 @@ func _ready():
 func _process(delta):
 	_process_primitives(rects, delta)
 	_process_primitives(circle_arcs, delta)
+	_process_primitives(lines, delta)
 	update()
 
 func _process_primitives(primitives, delta):
@@ -62,6 +73,7 @@ func _process_primitives(primitives, delta):
 func _draw():
 	_draw_primitives(rects)
 	_draw_primitives(circle_arcs)
+	_draw_primitives(lines)
 
 func _draw_primitives(primitives):
 	for primitive in primitives:
