@@ -18,3 +18,6 @@ func _process(delta):
 	
 	DebugDraw2D.draw_line(viewport_size/2 + Vector2(-25, 90), viewport_size/2 + Vector2(25, 90), Color(1, 1, 1), 4)
 	DebugDraw2D.draw_line_vector(viewport_size/2 + Vector2(-25, 110), Vector2(50, 0), Color(1, 1, 1), 4)
+	
+	DebugDraw2D.draw_arrow(viewport_size/2 + Vector2(75, 90), viewport_size/2 + Vector2(125, 90), Color(1, 1, 1), 1)
+	DebugDraw2D.draw_arrow_vector(viewport_size/2 + Vector2(125, 110), Vector2(-50, 0), Color(1, 1, 1), 5)

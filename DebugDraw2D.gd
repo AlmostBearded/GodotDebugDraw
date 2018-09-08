@@ -16,6 +16,24 @@ func draw_line_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, du
 	var line = Line.new(origin, origin + vector, color, line_width, duration)
 	lines.push_back(line)
 
+func draw_arrow(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
+	var line = Line.new(from, to, color, line_width, duration)
+	lines.push_back(line)
+	var arrow_len = (to - from).length()
+	var arrow_dir = (to - from) / arrow_len
+	var arrow_head_size = arrow_len * .25
+	var arrow_head_start = from + arrow_dir * arrow_len * .75
+	var arrow_normal = Vector2(arrow_dir.y, -arrow_dir.x)
+	var arrow_line_1 = Line.new(arrow_head_start + arrow_normal * arrow_head_size, 
+		to - arrow_dir * line_width/2, color, line_width, duration)
+	var arrow_line_2 = Line.new(arrow_head_start - arrow_normal * arrow_head_size, 
+		to - arrow_dir * line_width/2, color, line_width, duration)
+	lines.push_back(arrow_line_1)
+	lines.push_back(arrow_line_2)
+
+func draw_arrow_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
+	draw_arrow(origin, origin + vector, color, line_width, duration)
+
 func draw_cube(center, size = 10, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var cube = Rect.new(center, Vector2(size, size), color, false, line_width, duration)
 	rects.push_back(cube)
