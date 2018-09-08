@@ -46,6 +46,7 @@ Supported Primitives:
 - Cubes: `DebugDraw2D.draw_cube(center, size, color, filled, duration)`
 - Circles: `DebugDraw2D.draw_circle(center, radius, resolution, color, filled, duration)`
 - Circle Arcs/Pies: `DebugDraw2D.draw_circle_arc(center, radius, angle_from, angle_to, pie, resolution, color, filled, duration)`
+- Rectangles: `DebugDraw2D.draw_rect(center, size, color, filled, duration)`
 
 # Extensions
 
