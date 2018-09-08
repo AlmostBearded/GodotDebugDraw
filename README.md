@@ -43,6 +43,20 @@ The result should look something like this: ![](https://i.imgur.com/31EuOoz.png)
 
 Because you added an Autoload to the DebugDraw2D script you can access it from everywhere with `DebugDraw2D`.
 
+Some of the available methods:
+- `draw_line(...)`
+- `draw_rect(...)`
+- `draw_cube(...)`
+- `draw_arrow(...)`
+- `draw_circle(...)`
+- `draw_circle_arc(...)`
+
+Supported features:
+- Draw in any color
+- Draw with any line width
+- Draw filled shapes with `draw_..._filled()`
+- Draw for a any duration or for just one frame
+
 Supported Primitives:
 - Lines
 - Arrows
@@ -50,6 +64,8 @@ Supported Primitives:
 - Cubes
 - Circles
 - Circle Arcs/Pies
+
+Check the source code if you need more details. It's a fairly small asset so you should find your way around quickly.
 
 # Extensions
 
