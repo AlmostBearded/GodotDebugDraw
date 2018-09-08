@@ -7,7 +7,7 @@ var angle_to = 360
 var pie = true
 var resolution = 16
 
-func _init(center, radius, angle_from, angle_to, pie, resolution, color, filled, duration).(color, filled, duration):
+func _init(center, radius, angle_from, angle_to, pie, resolution, color, filled, line_width, duration).(color, filled, line_width, duration):
 	self.center = center
 	self.radius = radius
 	self.angle_from = angle_from
