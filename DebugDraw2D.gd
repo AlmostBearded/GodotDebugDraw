@@ -12,7 +12,7 @@ func draw_line(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var line = Line.new(from, to, color, line_width, duration)
 	lines.push_back(line)
 
-func draw_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func draw_line_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var line = Line.new(origin, origin + vector, color, line_width, duration)
 	lines.push_back(line)
 
