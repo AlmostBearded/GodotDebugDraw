@@ -45,17 +45,17 @@ The result should look something like this: ![](https://i.imgur.com/31EuOoz.png)
 Because you added an Autoload to the DebugDraw2D script you can access it from everywhere with `DebugDraw2D`.
 
 Some of the available methods:
-- `draw_line(...)`
-- `draw_rect(...)`
-- `draw_cube(...)`
-- `draw_arrow(...)`
-- `draw_circle(...)`
-- `draw_circle_arc(...)`
+- `DebugDraw2D.line(...)`
+- `DebugDraw2D.rect(...)`
+- `DebugDraw2D.cube(...)`
+- `DebugDraw2D.arrow(...)`
+- `DebugDraw2D.circle(...)`
+- `DebugDraw2D.circle_arc(...)`
 
 Supported features:
 - Draw in any color
 - Draw with any line width
-- Draw filled shapes with `draw_..._filled()`
+- Draw filled shapes with `DebugDraw2D...._filled()`
 - Draw for a any duration or for just one frame
 
 Supported Primitives:
