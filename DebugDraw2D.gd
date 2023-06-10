@@ -78,7 +78,7 @@ func _process(delta):
 	_process_primitives(rects, delta)
 	_process_primitives(circle_arcs, delta)
 	_process_primitives(lines, delta)
-	update()
+	queue_redraw()
 
 func _process_primitives(primitives, delta):
 	var indices_to_remove = []
@@ -88,7 +88,7 @@ func _process_primitives(primitives, delta):
 			indices_to_remove.push_back(i)
 		primitive.duration_left -= delta
 	for i in indices_to_remove:
-		primitives.remove(i)
+		primitives.remove_at(i)
 
 func _draw():
 	_draw_primitives(rects)
@@ -99,9 +99,9 @@ func _draw_primitives(primitives):
 	for primitive in primitives:
 		var points = primitive.get_points()
 		if primitive.filled:
-			.draw_polygon(points, PoolColorArray([primitive.color]))
+			super.draw_polygon(points, PackedColorArray([primitive.color]))
 		else:
 			for i in range(0, points.size() - 1):
 				var from = points[i]
 				var to = points[i + 1]
-				.draw_line(from, to, primitive.color, primitive.line_width)
+				super.draw_line(from, to, primitive.color, primitive.line_width)

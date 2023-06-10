@@ -1,4 +1,4 @@
-![Godot 3](https://img.shields.io/badge/Godot-v3-%23478cbf?logo=godot-engine&logoColor=white)
+![Godot 4.0](https://img.shields.io/badge/Godot-v4.0-%23478cbf?logo=godot-engine&logoColor=white)
 # Overview
 
 This addon adds support for drawing shapes on the screen for various (mostly debugging) purposes. 

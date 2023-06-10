@@ -3,7 +3,8 @@ extends "./DebugPrimitive2D.gd"
 var center = Vector2(0, 0)
 var size = Vector2(10, 10)
 
-func _init(center, size, color, filled, line_width, duration).(color, filled, line_width, duration):
+func _init(center, size, color, filled, line_width, duration):
+	super(color, filled, line_width, duration)
 	self.center = center
 	self.size = size
 
@@ -11,8 +12,8 @@ func get_points():
 	var half_x = size.x / 2
 	var half_y = size.y / 2
 
-	var points = PoolVector2Array()
-
+	var points = PackedVector2Array()
+	
 	if filled:
 		points.push_back(center)
 

@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 func _process(delta):
 	var viewport_size = get_viewport().size
