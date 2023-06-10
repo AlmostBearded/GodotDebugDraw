@@ -24,8 +24,8 @@ func get_points():
 	for i in range(resolution+1):
 		var angle_point = deg2rad(angle_from + i * (angle_to-angle_from) / resolution - 90)
 		points.push_back(center + Vector2(cos(angle_point), sin(angle_point)) * radius)
-	
+
 	if pie:
 		points.push_back(center)
-	
+
 	return points

@@ -24,11 +24,11 @@ func draw_arrow(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var arrow_normal = Vector2(arrow_dir.y, -arrow_dir.x)
 	var arrow_start_1 = arrow_head_start + arrow_normal * arrow_head_size
 	var arrow_start_2 = arrow_head_start - arrow_normal * arrow_head_size
-		
+
 	var line = Line.new(from, to, color, line_width, duration)
 	var head_line_1 = Line.new(arrow_start_1, to - arrow_dir * line_width/2, color, line_width, duration)
 	var head_line_2 = Line.new(arrow_start_2, to - arrow_dir * line_width/2, color, line_width, duration)
-	
+
 	lines.push_back(line)
 	lines.push_back(head_line_1)
 	lines.push_back(head_line_2)
@@ -51,21 +51,21 @@ func draw_rect(center, size = Vector2(15, 10), color = Color(1, 0, 1), line_widt
 func draw_rect_filled(center, size = Vector2(15, 10), color = Color(1, 0, 1), duration = 0):
 	var rect = Rect.new(center, size, color, true, 1, duration)
 	rects.push_back(rect)
-	
+
 func draw_circle(center, radius = 10, resolution = 16, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, false, line_width, duration)
 	circle_arcs.push_back(circle)
-	
+
 func draw_circle_filled(center, radius = 10, resolution = 16, color = Color(1, 0, 1), duration = 0):
 	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, true, 1, duration)
 	circle_arcs.push_back(circle)
 
-func draw_circle_arc(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16, 
+func draw_circle_arc(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16,
 		color = Color(1, 0, 1), line_width = 1, duration = 0):
 	var circle_arc = CircleArc.new(center, radius, angle_from, angle_to, pie, resolution, color, false, line_width, duration)
 	circle_arcs.push_back(circle_arc)
 
-func draw_circle_arc_filled(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16, 
+func draw_circle_arc_filled(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16,
 		color = Color(1, 0, 1), duration = 0):
 	var circle_arc = CircleArc.new(center, radius, angle_from, angle_to, pie, resolution, color, true, 1, duration)
 	circle_arcs.push_back(circle_arc)

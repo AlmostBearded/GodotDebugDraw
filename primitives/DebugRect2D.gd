@@ -12,14 +12,14 @@ func get_points():
 	var half_y = size.y / 2
 
 	var points = PoolVector2Array()
-	
+
 	if filled:
 		points.push_back(center)
-	
+
 	points.push_back(center + Vector2(-half_x, half_y));
 	points.push_back(center + Vector2(half_x, half_y));
 	points.push_back(center + Vector2(half_x, -half_y));
 	points.push_back(center + Vector2(-half_x, -half_y));
 	points.push_back(center + Vector2(-half_x, half_y));
-	
+
 	return points
