@@ -10,4 +10,4 @@ func _init(color, filled, line_width, duration):
 	self.duration_left = duration
 
 func get_points():
-	return PoolVector2Array()
+	return PackedVector2Array()
