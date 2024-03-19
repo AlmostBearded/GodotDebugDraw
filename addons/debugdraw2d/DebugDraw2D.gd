@@ -87,8 +87,8 @@ func _process_primitives(primitives, delta):
 		if primitive.duration_left < 0:
 			indices_to_remove.push_back(i)
 		primitive.duration_left -= delta
-	for i in indices_to_remove:
-		primitives.remove_at(i)
+	for i in range(indices_to_remove.size() - 1, -1, -1):
+		primitives.remove_at(indices_to_remove[i])
 
 func _draw():
 	_draw_primitives(rects)

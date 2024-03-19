@@ -9,8 +9,7 @@ Currently there's only support for 2D drawing but I'll be extending this as I ne
 
 # Installation
 
-You need to put the contents of this repository into your project's `addons` folder 
-(usually a folder called `addons` in the root of your project).
+Copy the addons/debugdraw2d/ folder into addons/debugdraw2d/ in your project.
 
 ## Via Git
 
@@ -18,17 +17,18 @@ You can install the addon via git by executing:
 
 ```
 git clone git@github.com:AlmostBearded/GodotDebugDraw.git ADDONS_FOLDER
+mv ADDONS_FOLDER/debugdraw2d $yourproject/addons/debugdraw2d
 ``` 
 
 ## Manually 
 
-The alternative to installing via git would be to simply download a zip file of this repository 
-and extract it into your `addons` folder.
+The alternative to installing via git would be to simply download a zip file of this repository,
+extract it, and copy the `debugdraw2d` folder into your `addons` folder.
 
 
 ## Autoload
 
-The only thing left to do is to add an autoload for the DebugDraw2D script. 
+The only thing left to do is to add an autoload for the `DebugDraw2D` script. 
 
 (If anyone knows how I could automate this please tell me!)
 
