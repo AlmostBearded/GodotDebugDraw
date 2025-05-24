@@ -9,40 +9,23 @@ Currently there's only support for 2D drawing but I'll be extending this as I ne
 
 # Installation
 
-Copy the addons/debugdraw2d/ folder into addons/debugdraw2d/ in your project.
+Add this addon to your project by importing it in the AssetLib tab in the Godot Editor.
 
-## Via Git
-
-You can install the addon via git by executing:
-
-```
-git clone git@github.com:AlmostBearded/GodotDebugDraw.git ADDONS_FOLDER
-mv ADDONS_FOLDER/debugdraw2d $yourproject/addons/debugdraw2d
-``` 
-
-## Manually 
-
-The alternative to installing via git would be to simply download a zip file of this repository,
-extract it, and copy the `debugdraw2d` folder into your `addons` folder.
-
-
-## Autoload
-
-The only thing left to do is to add an autoload for the `DebugDraw2D` script. 
-
-(If anyone knows how I could automate this please tell me!)
-
-Steps:
-1. Go to Project > Project Settings
-2. Go to the Autoload tab
-3. Add the DebugDraw2D script by locating it via it's path and naming it DebugDraw2D
-
-The result should look something like this: ![](https://i.imgur.com/31EuOoz.png)
-
+- First fetch the addon:
+  - execute `git clone git@github.com:AlmostBearded/GodotDebugDraw.git` to fetch the repository via git and open context menu to execute the "Send to > Compressed (zipped) folder" action.
+  - OR download a zip file of this repository via github.
+  - either way you should have a zipped folder at the end.
+- Open your Godot project in your Godot editor.
+- Open the AssetLib.
+- Click the "Import..." button.
+- Select the zip file fetched at first step and click on "Open".
+- Click the "Plugins..." button.
+- On the row with name "GodotDebugDraw", check the checkbox in column "Enabled" to enable the addon.
+- The addon is now active.
 
 # Usage
 
-Because you added an Autoload to the DebugDraw2D script you can access it from everywhere with `DebugDraw2D`.
+The DebugDraw2D script is available from everywhere with the `DebugDraw2D` keyword (as an autoload).
 
 Some of the available methods:
 - `DebugDraw2D.line(...)`
