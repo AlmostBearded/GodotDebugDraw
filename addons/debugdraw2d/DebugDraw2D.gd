@@ -8,15 +8,15 @@ var rects = []
 var circle_arcs = []
 var lines = []
 
-func line(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func line(from, to, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var line = Line.new(from, to, color, line_width, duration)
 	lines.push_back(line)
 
-func line_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func line_vector(origin, vector, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var line = Line.new(origin, origin + vector, color, line_width, duration)
 	lines.push_back(line)
 
-func arrow(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func arrow(from, to, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var arrow_len = (to - from).length()
 	var arrow_dir = (to - from) / arrow_len
 	var arrow_head_size = arrow_len * .25
@@ -33,40 +33,40 @@ func arrow(from, to, color = Color(1, 0, 1), line_width = 1, duration = 0):
 	lines.push_back(head_line_1)
 	lines.push_back(head_line_2)
 
-func arrow_vector(origin, vector, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func arrow_vector(origin, vector, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	arrow(origin, origin + vector, color, line_width, duration)
 
-func cube(center, size = 10, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func cube(center, size = 10.0, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var cube = Rect.new(center, Vector2(size, size), color, false, line_width, duration)
 	rects.push_back(cube)
 
-func cube_filled(center, size = 10, color = Color(1, 0, 1), duration = 0):
+func cube_filled(center, size = 10.0, color = Color(1, 0, 1), duration = 0.0):
 	var cube = Rect.new(center, Vector2(size, size), color, true, 1, duration)
 	rects.push_back(cube)
 
-func rect(center, size = Vector2(15, 10), color = Color(1, 0, 1), line_width = 1, duration = 0):
+func rect(center, size = Vector2(15, 10), color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var rect = Rect.new(center, size, color, false, line_width, duration)
 	rects.push_back(rect)
 
-func rect_filled(center, size = Vector2(15, 10), color = Color(1, 0, 1), duration = 0):
+func rect_filled(center, size = Vector2(15, 10), color = Color(1, 0, 1), duration = 0.0):
 	var rect = Rect.new(center, size, color, true, 1, duration)
 	rects.push_back(rect)
 
-func circle(center, radius = 10, resolution = 16, color = Color(1, 0, 1), line_width = 1, duration = 0):
+func circle(center, radius = 10.0, resolution = 16, color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, false, line_width, duration)
 	circle_arcs.push_back(circle)
 
-func circle_filled(center, radius = 10, resolution = 16, color = Color(1, 0, 1), duration = 0):
+func circle_filled(center, radius = 10.0, resolution = 16, color = Color(1, 0, 1), duration = 0.0):
 	var circle = CircleArc.new(center, radius, 0, 360, false, resolution, color, true, 1, duration)
 	circle_arcs.push_back(circle)
 
-func circle_arc(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16,
-		color = Color(1, 0, 1), line_width = 1, duration = 0):
+func circle_arc(center, radius = 10.0, angle_from = 0.0, angle_to = 90.0, pie = true, resolution = 16,
+		color = Color(1, 0, 1), line_width = 1.0, duration = 0.0):
 	var circle_arc = CircleArc.new(center, radius, angle_from, angle_to, pie, resolution, color, false, line_width, duration)
 	circle_arcs.push_back(circle_arc)
 
-func circle_arc_filled(center, radius = 10, angle_from = 0, angle_to = 90, pie = true, resolution = 16,
-		color = Color(1, 0, 1), duration = 0):
+func circle_arc_filled(center, radius = 10.0, angle_from = 0.0, angle_to = 90.0, pie = true, resolution = 16,
+		color = Color(1, 0, 1), duration = 0.0):
 	var circle_arc = CircleArc.new(center, radius, angle_from, angle_to, pie, resolution, color, true, 1, duration)
 	circle_arcs.push_back(circle_arc)
 

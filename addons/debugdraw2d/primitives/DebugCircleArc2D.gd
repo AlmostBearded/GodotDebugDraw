@@ -1,9 +1,9 @@
 extends "./DebugPrimitive2D.gd"
 
 var center = Vector2(0, 0)
-var radius = 10
-var angle_from = 0
-var angle_to = 360
+var radius := 10.0
+var angle_from := 0.0
+var angle_to := 360.0
 var pie = true
 var resolution = 16
 

@@ -1,7 +1,7 @@
-var duration_left = 0
+var duration_left := 0.0
 var filled = false
 var color = Color(1, 0, 1)
-var line_width = 1
+var line_width := 1.0
 
 func _init(color, filled, line_width, duration):
 	self.color = color
